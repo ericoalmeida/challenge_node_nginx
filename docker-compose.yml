@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ericoalmeida/challenge_node
+    container_name: app
+    restart: unless-stopped
+    networks:
+      - local-network
+
+  proxy:
+    build:
+      context: ./reverse-proxy
+      dockerfile: Dockerfile
+    image: ericoalmeida/reverse_proxy
+    container_name: proxy
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    depends_on:
+      - app
+    networks:
+      - local-network
+
+networks:
+  local-network:
+    driver: bridge
