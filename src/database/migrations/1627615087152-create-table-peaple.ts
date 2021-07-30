@@ -8,7 +8,7 @@ export class createTablePeaple1627615087152 implements MigrationInterface {
                 columns: [
                     {
                         name: 'id',
-                        type: 'uuid',
+                        type: 'int',
                         isPrimary: true
                     },
                     {
