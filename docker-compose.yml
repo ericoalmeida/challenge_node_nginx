@@ -8,6 +8,12 @@ services:
     image: ericoalmeida/challenge_node
     container_name: app
     restart: unless-stopped
+    environment:
+      - DB_HOST=localhost,
+      - DB_PORT=3306,
+      - DB_USERNAME=root,
+      - DB_PASSWORD=docker,
+      - DB_NAME=challenge_db,
     networks:
       - local-network
 
