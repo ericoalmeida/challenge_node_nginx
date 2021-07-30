@@ -8,4 +8,4 @@ RUN rm -rf dist && \
   npm install && \
   npx tsc
 
-ENTRYPOINT [ "npm", "run", "start:production" ]
+ENTRYPOINT [ "./bin/docker-entrypoint.sh" ]
