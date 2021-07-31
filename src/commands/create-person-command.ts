@@ -2,7 +2,7 @@ import faker from 'faker';
 
 import { PeopleRepositoryProtocol } from "@src/repositories/people-repository-protocol";
 
-class CreatePeopleCommand{
+class CreatePersonCommand{
   constructor(
     private readonly repository: PeopleRepositoryProtocol
   ){}
@@ -14,4 +14,4 @@ class CreatePeopleCommand{
   }
 }
 
-export { CreatePeopleCommand }
+export { CreatePersonCommand }
