@@ -1,10 +1,12 @@
 import { Router } from 'express';
 
+import { PeopleController } from '@src/controllers/people-controller';
+
 const routes = Router();
 
-routes.get('/', (request, response) => {
-  return response.send('<h1>Full Cycle Rocks!</h1>');
-});
+const peopeController = new PeopleController()
+
+routes.get('/', peopeController.handle);
 
 export { routes }
 

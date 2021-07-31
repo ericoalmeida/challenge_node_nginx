@@ -1,6 +1,7 @@
 import 'reflect-metadata';
+import 'module-alias/register';
 
-import { app } from "./app";
+import { app } from "@src/app";
 
 const PORT = 3000;
 
